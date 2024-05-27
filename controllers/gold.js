@@ -32,7 +32,7 @@ const gold = async (req, res) => {
     console.log('mazaneh: ', prevMazaneh);
 
     const browser = await puppeteer.launch({
-        headless: false,
+        headless: true,
         args: [
             "--disable-setuid-sandbox",
             "--no-sandbox",
@@ -40,6 +40,7 @@ const gold = async (req, res) => {
             "--no-zygote",
         ],
         executablePath: process.env.PUPPETEER_EXECUTABLE_PATH,
+        timeout: 60000
     });
     try {
         const page = await browser.newPage();
