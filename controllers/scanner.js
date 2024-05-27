@@ -17,8 +17,8 @@ const scanner = async () => {
         order: [['id', 'DESC']],
         attributes: ['sell', 'buy']
     })
-    const prevSell = pervDirham ? pervDirham[0].sell : null;
-    const prevBuy = pervDirham ? pervDirham[0].buy : null;
+    const prevSell = pervDirham ? pervDirham[0]?.sell : null;
+    const prevBuy = pervDirham ? pervDirham[0]?.buy : null;
 
     await new Promise(resolve => setTimeout(resolve, 500));
 
