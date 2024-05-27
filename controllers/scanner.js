@@ -27,7 +27,7 @@ const scanner = async () => {
     console.log('aed:', prevAed)
 
     const browser = await puppeteer.launch({
-        headless:true,
+        headless:false,
         args: [
             "--disable-setuid-sandbox",
             "--no-sandbox",
